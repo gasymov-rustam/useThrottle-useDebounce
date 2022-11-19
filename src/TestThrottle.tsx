@@ -3,7 +3,8 @@ import { useThrottle } from './hooks/useThrottle';
 
 export const TestThrottle = () => {
   const callBack = useCallback(() => console.log('MouseMove'), []);
-  const throttle = useThrottle(callBack, 1000);
+  // const throttled = throttle(callBack, 2000);
+  const throttle = useThrottle(callBack, 500);
 
   useEffect(() => {
     document.addEventListener('mousemove', throttle);
